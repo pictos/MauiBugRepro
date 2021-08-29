@@ -5,23 +5,29 @@
              x:Class="MauiBugRepro.App"
              windows:Application.ImageDirectory="Assets">
     <Application.Resources>
-        <ResourceDictionary>
 
-            <Color x:Key="PageBackgroundColor">#512bdf</Color>
-            <Color x:Key="PrimaryTextColor">White</Color>
+        <ControlTemplate x:Key="GalleryPageTemplate">
+            <StackLayout Spacing="0" VerticalOptions="CenterAndExpand">
+                <Label Text="I'm a control template"
+                       FontSize="Large"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+        </ControlTemplate>
 
-            <Style TargetType="Label">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-            </Style>
+        <Color x:Key="PageBackgroundColor">#512bdf</Color>
+        <Color x:Key="PrimaryTextColor">White</Color>
 
-            <Style TargetType="Button">
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
-                <Setter Property="FontFamily" Value="OpenSansRegular" />
-                <Setter Property="BackgroundColor" Value="#2b0b98" />
-                <Setter Property="Padding" Value="14,10" />
-            </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+        </Style>
 
-        </ResourceDictionary>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+            <Setter Property="FontFamily" Value="OpenSansRegular" />
+            <Setter Property="BackgroundColor" Value="#2b0b98" />
+            <Setter Property="Padding" Value="14,10" />
+        </Style>
+
     </Application.Resources>
 </Application>

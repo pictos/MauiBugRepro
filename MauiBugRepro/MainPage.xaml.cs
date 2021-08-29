@@ -11,10 +11,11 @@ namespace MauiBugRepro
         }
 
         int count = 0;
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
             CounterLabel.Text = $"Current count: {count}";
+            await Navigation.PushAsync(new TemplatedPage());
         }
     }
 }

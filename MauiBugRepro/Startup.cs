@@ -17,6 +17,9 @@ namespace MauiBugRepro
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                })
+                .ConfigureMauiHandlers(h => { 
+                    h.AddCompatibilityRenderers(typeof(Xamarin.CommunityToolkit.UI.Views.SemanticOrderViewRenderer).Assembly);
                 });
         }
     }

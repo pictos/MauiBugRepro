@@ -1,9 +1,10 @@
-﻿<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
-             xmlns:local="clr-namespace:MauiBugRepro"
-             x:Class="MauiBugRepro.App"
-             windows:Application.ImageDirectory="Assets">
+﻿<Application
+    x:Class="MauiBugRepro.App"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MauiBugRepro"
+    xmlns:windows="clr-namespace:Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;assembly=Microsoft.Maui.Controls"
+    windows:Application.ImageDirectory="Assets">
     <Application.Resources>
         <ResourceDictionary>
 

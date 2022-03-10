@@ -11,7 +11,25 @@ namespace MauiBugRepro
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            CreateMainPage();
+        }
+
+
+
+        void CreateMainPage()
+        {
+            var page = new ContentPage
+            {
+                Content = new Button
+                {
+                    Text = "Navigate To NextPage",
+                    Command = new Command(() => Application.Current.MainPage.Navigation.PushAsync(new MainPage())),
+                    VerticalOptions = LayoutOptions.Center,
+                    HorizontalOptions = LayoutOptions.Center,
+                }
+            };
+
+            MainPage = new NavigationPage(page);
         }
     }
 }

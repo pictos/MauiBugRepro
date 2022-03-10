@@ -1,6 +1,7 @@
 ﻿using Microsoft.Maui;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.PlatformConfiguration.WindowsSpecific;
+using System;
 using Application = Microsoft.Maui.Controls.Application;
 
 namespace MauiBugRepro
@@ -27,6 +28,17 @@ namespace MauiBugRepro
                     VerticalOptions = LayoutOptions.Center,
                     HorizontalOptions = LayoutOptions.Center,
                 }
+            };
+
+            page.Appearing += (s, e) =>
+            {
+                GC.Collect();
+                GC.Collect();
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+                GC.Collect();
+                GC.Collect();
+                GC.Collect();
             };
 
             MainPage = new NavigationPage(page);

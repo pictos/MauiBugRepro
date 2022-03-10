@@ -8,16 +8,19 @@ using Microsoft.Maui.Hosting;
 
 namespace MauiBugRepro
 {
-    public class Startup : IStartup
+    public class MauiProgram
     {
-        public void Configure(IAppHostBuilder appBuilder)
+        public static MauiApp CreateMauiApp()
         {
-            appBuilder
+            var builder = MauiApp.CreateBuilder();
+            builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 });
+
+            return builder.Build();
         }
     }
 }
